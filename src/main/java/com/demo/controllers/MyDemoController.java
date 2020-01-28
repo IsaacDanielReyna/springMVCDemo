@@ -16,12 +16,12 @@ public class MyDemoController {
             "the time is always right to do what's right"
     };
 
-    @RequestMapping(value = "/getQuote")
+    @RequestMapping(value = "/getQuote") // url handler
     public String getRandomQuote(Model model){
         int rand = new Random().nextInt(quotes.length);
         String randomQuote = quotes[rand];
 
-        model.addAttribute("randomQuote", randomQuote);
+        model.addAttribute("randomQuote", randomQuote); // var get passed to view
         return "quote"; // view name
     }
 }
