@@ -15,8 +15,20 @@
 
         <!-- View Resolver -->
         <context:component-scan base-package="com.demo.controllers"></context:component-scan>
+
+        <!-- can be replaced programmatically in Java -->
         <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
                 <property name="prefix" value="WEB-INF/jsp/"/>
                 <property name="suffix" value=".jsp" />
         </bean>
+
+        <!-- Uploading Files Using Commons FileUpload -->
+        <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+                <property name="maxUploadSize" value="5252880"/>
+        </bean>
+
+        <!-- can be replaced programmatically in Java -->
+        <!-- Serving Static Files from a Spring MVC app: Double asterisks enables navigation to subfolders -->
+        <!-- Example: http://localhost:8080/springMVCDemo_war/myResources/images/accenture.jpg -->
+        <!-- <mvc:resources mapping="/myResources/**" location="/resources/"/> -->
 </beans>

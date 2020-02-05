@@ -40,19 +40,20 @@
       <artifactId>jstl</artifactId>
       <version>1.2</version>
     </dependency>
-    <!-- Validation Annotation -->
+
     <dependency>
       <groupId>javax.validation</groupId>
       <artifactId>validation-api</artifactId>
-      <version>1.1.0.Final</version>
+      <version>2.0.1.Final</version>
     </dependency>
 
-    <!-- Email validation Annotation -->
+    <!-- Uploading Files using Commons FileUpload -->
     <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-validator</artifactId>
-      <version>5.1.2.Final</version>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.4</version>
     </dependency>
+
 
   </dependencies>
 

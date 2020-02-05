@@ -1,22 +1,24 @@
 package com.demo.model;
-
-import org.hibernate.validator.constraints.Email;
-
 import javax.validation.constraints.*;
 
+
 public class Account {
+    @NotNull
     @Size(min=5, max=10)
     private String firstName;
 
+    @NotNull
     @Size(min=5, max=10)
     private String lastName;
 
     @NotNull @Min(15)
     private int age = 15;
 
+    @NotNull
     @Size(min=5, max=100)
     private String address;
 
+    @NotNull
     @Email
     private String email;
 
